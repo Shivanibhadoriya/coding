@@ -1,0 +1,114 @@
+  /* puri screen ki margin padding hta dega */
+*{
+    margin:0;
+    padding:0;  
+    font-family: "Poppins", sans-serif;
+}
+  /* ab muje main box me image fit karna he */
+.main_box{
+    background: url("image/coding.jpg");
+    height :100vh; /* iske through hum full screen pr image fit karte he */
+    background-size :cover;   /* iske throught hamari image puri screen ko cover kar legi */
+}
+/* jahan pr bhi confusion ho to mdn pr chale jaye */
+.btn_one i{
+    color:white;
+    font-size:30px;   /* butten size increase */
+    font-weight:700;   /* button ko bold karne ke liye */
+    position:absolute;
+    left:10px;   /* left se position set kar di */
+    line-height:60px; /* ye text ki uper or neeche ki line ke distance ko set kar deta he */
+  transition: all 0.3s linear;
+}   
+.sidebar_menu{
+    position:fixed;
+   left: -300px; /* humne left me negative isliye liya kyuki hume screen se hatane he ise */
+    height:100vh;  /* humne height vh isliye li he ki vo puri complete height le*/
+    width: 300px; 
+    background-color:rgba(255,255,255,0.1);
+    box-shadow: 0 0 4px rgba(255,255,255,0.5);  /* jab bhi hum check box ko check karege to vo linearly nikal ke ayega */
+    transition:all 0.2s linear;
+}
+.sidebar_menu .logo{
+  position: absolute;
+  width:100%;   /*puri width mile jitni mil sakti he*/
+  line-height:60px; /* ye utna hi bda ho jaye jitna humne btn 1 ko banaya he*/
+  box-shadow:0 0 4px rgba(255,255,255,0.5) ;
+  height:60px;
+
+}
+.sidebar_menu .logo a{
+   position: absolute;
+   left: 50px;
+   color: white;
+   font-size:25px;
+   text-decoration:none;
+   font-weight:500;
+}
+.sidebar_menu .menu{
+  position: absolute;
+  width: 100%;
+  top:80px;
+}
+.sidebar_menu .btn_two i{
+  color: grey;
+  font-size:25px;   /* butten size increase */
+  font-weight:700;   /* button ko bold karne ke liye */
+  position:absolute;
+  left:280px;   /* left se position set kar di */
+  line-height:60px; /* ye text ki uper or neeche ki line ke distance ko set kar deta he */
+  /* opacity:0 ;  abhi hum ise galab kar dete he  */
+  cursor: pointer;  /* jab bhi cursor pr click karenge to finger ban kar aa jayegi */
+  transition:all 0.2s linear;
+}
+.sidebar_menu .menu li{
+  margin-top:6px;
+  padding:14px 20px;
+}
+.sidebar_menu .menu  i,a{
+  text-decoration:none;
+  color :white;
+  font-size:20px;
+}
+
+.sidebar_menu .menu i{
+  padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+  position:absolute; /* absolute ki vajah se ye iske parent ke according sunega matlab jo bhi hum css lagayege ye iski parents class yani ki sidebar-menu se mankar chalega */
+  left:26%;
+  bottom:50px;
+}
+.sidebar_menu .social_media i{
+  color:white;
+  opacity:0.5;  /* jab hume use highlight na karna ho to 1 se kam kar lo according to your need */
+  bottom:0 5px;
+}
+#check{
+  display : none;  /* jab bhi hume kisi cheez ko screen se gayab karna ho to  */
+}
+.sidebar_menu .menu li:hover{   /* jab bhi hum click kare to shadow ho jaye */
+  box-shadow:0 0 4px rgba(255 , 255 , 255 , 0.5) ;
+}
+.btn_one i:hover{
+  font-size:40px;
+
+}
+.btn_two i:hover{
+  font-size:30px;
+}
+
+.sidebar_menu  .social_media i:hover{
+  opacity:1;
+  transform: scale(1.2);
+}
+#check:checked ~ .sidebar_menu {
+   left:0;
+}
+#check:checked ~ .btn_one i{
+  opacity:0;
+}
+/* #check:checked ~ .sidebar_menu .btn_two i{
+  opacity:1;
+} */
